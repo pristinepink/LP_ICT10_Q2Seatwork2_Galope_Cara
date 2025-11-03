@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamechaser Grade Calculator</title>
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+        body{
+            background-color: #fff7fd;
+            font-family: 'Gill Sans', 'Gill Sans MT';
+        }
+        .display{
+            display: flex;
+            margin-left: 15px;
+        }
+        .label-style{
+            width: 170px;
+            text-align: left;
+            background-color: #e4afcd;
+            text-align: center;
+        }
+        p {
+            margin: 2px;
+        }
+        .container{
+            border: solid #e4afcd 1px;
+            padding: 20px;
+            width: 550px;
+            background-color: #ffe0f2;
+            border-radius: 20px;
+        }
+        button{
+            width: 500px;
+            padding: 10px;
+            background-color: #c898dc;
+            color: white;
+            border-radius: 13px;
+        }
+        #first, #last {
+        width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <br>
+    <br>
+
+    <div class="container">
+    <bold><center><h1> Student Grade Calculator </h1></center></bold>
+            <div class="cont-2 col-md-6">
+                    <div class="mb-3">
+                        <label for="customer" class="label-style form-label">First Name:</label>
+                        <input type="text" class="form-control" id="first" placeholder="Enter your first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="label-style form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="last" placeholder="Enter your last name">
+                    </div>
+                </div>
+            <div class="cont-2 col-md-6">
+                <h3 class="custom-text mb-3">Grades per subject</h3>
+                <div class="display">
+                <div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">English:</label>
+                        <input type="number" class="form-control" id="english" placeholder="Enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">Math:</label>
+                        <input type="number" class="form-control" id="math" placeholder="Enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Science:</label>
+                        <input type="number" class="form-control" id="science" placeholder="Enter your grade">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">SS:</label>
+                        <input type="number" class="form-control" id="ss" placeholder="Enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Filipino:</label>
+                        <input type="number" class="form-control" id="filipino" placeholder="Enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">ICT:</label>
+                        <input type="number" class="form-control" id="ict" placeholder="Enter your grade">
+                    </div>
+                </div>
+            </div>
+    </div> 
+
+    <br>
+
+    <button py-click="compute_average">Calculate GWA</button>
+    
+    <br><br>
+    
+<div class="display">  
+    <div id="grades_container" style="width: 280px; margin-right: 10px; display: none;" class="container">
+        <p>English: <span id="english_output"></span></p>
+        <p>Math: <span id="math_output"></span></p>
+        <p>Science: <span id="science_output"></span></p>
+        <p>SS: <span id="ss_output"></span></p>
+        <p>Filipino: <span id="filipino_output"></span></p>
+        <p>ICT: <span id="ict_output"></span></p>
+    </div>
+
+    <div>
+        <br>
+        <div id="name"></div>
+        <br>
+        <div id="output"></div>
+    </div>
+
+</div>
+</div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
